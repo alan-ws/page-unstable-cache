@@ -25,7 +25,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
           ).json(),
         };
       },
-      undefined,
+      [ctx.params!.id],
       {
         tags: ["article", ctx.params.id],
       }
